@@ -1,0 +1,15 @@
+Source: pi-puck-wifi-led
+Section: misc
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck
+
+Package: pi-puck-wifi-led
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, sysfsutils
+Description: Pi-puck Wi-Fi LED set-up
+ Sets the appropriate netdev trigger options for Pi-puck's Wi-Fi LED,
+ and enables the ledtrig-netdev kernel module.

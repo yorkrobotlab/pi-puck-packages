@@ -1,0 +1,6 @@
+#!/bin/sh -e
+mkdir -p /usr/share/rpikernelhack/overlays
+mkdir -p /boot/overlays
+dpkg-divert --package rpikernelhack --rename --divert /usr/share/rpikernelhack/pi-puck-config.txt /boot/pi-puck-config.txt
+dpkg-divert --package rpikernelhack --rename --divert /usr/share/rpikernelhack/overlays/pi-puck.dtbo /boot/overlays/pi-puck.dtbo
+#DEBHELPER#

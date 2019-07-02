@@ -1,0 +1,12 @@
+#!/bin/sh -e
+if [ -f /usr/share/rpikernelhack/pi-puck-config.txt ]; then
+	rm -f /boot/pi-puck-config.txt
+	dpkg-divert --package rpikernelhack --rename --remove /boot/pi-puck-config.txt
+	sync
+fi
+if [ -f /usr/share/rpikernelhack/overlays/pi-puck.dtbo ]; then
+	rm -f /boot/overlays/pi-puck.dtbo
+	dpkg-divert --package rpikernelhack --rename --remove /boot/overlays/pi-puck.dtbo
+	sync
+fi
+#DEBHELPER#

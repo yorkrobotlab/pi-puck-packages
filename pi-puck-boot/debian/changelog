@@ -1,0 +1,17 @@
+pi-puck-boot (1.0.2) buster; urgency=medium
+
+  * Fixed updates by copying Raspberry Pi firmware preinst and postinst scripts
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 26 Jun 2019 15:00:00 +0100
+
+pi-puck-boot (1.0.1) buster; urgency=medium
+
+  * Removed some redundant options from pi-puck-config.txt
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 26 Jun 2019 14:18:00 +0100
+
+pi-puck-boot (1.0.0) buster; urgency=medium
+
+  * Initial release.
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Tue, 25 Jun 2019 17:11:00 +0100

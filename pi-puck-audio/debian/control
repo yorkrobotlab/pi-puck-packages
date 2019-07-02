@@ -1,0 +1,15 @@
+Source: pi-puck-audio
+Section: sound
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck
+
+Package: pi-puck-audio
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, wiringpi, libasound2
+Description: Pi-puck audio configuration
+ Includes Pi-puck microphone config for ALSA,
+ and scripts for enabing/disabling audio output.

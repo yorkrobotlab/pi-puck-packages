@@ -1,0 +1,2 @@
+pi-puck.dtbo /boot/overlays
+pi-puck-config.txt /boot

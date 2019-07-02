@@ -1,0 +1,15 @@
+Source: pi-puck-boot
+Section: misc
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck
+
+Package: pi-puck-boot
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Pi-puck boot configuration
+ Includes device tree overlay and config file for booting Raspbian on the
+ Pi-puck (anything that belongs in /boot).
