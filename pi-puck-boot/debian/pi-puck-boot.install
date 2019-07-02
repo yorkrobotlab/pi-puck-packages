@@ -1,2 +1,4 @@
 pi-puck.dtbo /boot/overlays
 pi-puck-config.txt /boot
+boot-hostname.service /lib/systemd/system
+boot-hostname /usr/lib/pi-puck-boot

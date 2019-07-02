@@ -1,0 +1,14 @@
+[Unit]
+Description=Set hostname from /boot/hostname
+ConditionPathExists=/boot/hostname
+Before=basic.target
+After=local-fs.target sysinit.target
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/pi-puck-boot/boot-hostname
+RemainAfterExit=yes
+
+[Install]
+WantedBy=basic.target

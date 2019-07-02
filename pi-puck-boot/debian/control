@@ -12,4 +12,5 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: Pi-puck boot configuration
  Includes device tree overlay and config file for booting Raspbian on the
- Pi-puck (anything that belongs in /boot).
+ Pi-puck (anything that belongs in /boot). Also sets hostname on boot from
+ '/boot/hostname' file (if it exists).

@@ -9,4 +9,5 @@ if [ -f /usr/share/rpikernelhack/overlays/pi-puck.dtbo ]; then
 	dpkg-divert --package rpikernelhack --rename --remove /boot/overlays/pi-puck.dtbo
 	sync
 fi
+systemctl enable boot-hostname
 #DEBHELPER#
