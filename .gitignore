@@ -1,0 +1,7 @@
+# debuild output files
+/*.dsc
+/*.tar.xz
+/*.deb
+/*.build
+/*.buildinfo
+/*.changes
