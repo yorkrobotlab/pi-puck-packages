@@ -1,0 +1,8 @@
+[submodule "dmxwebcam"]
+	path = dmxwebcam
+	url = https://github.com/yorkrobotlab/dmxwebcam.git
+	branch = debian
+[submodule "intelhex"]
+	path = intelhex
+	url = https://github.com/yorkrobotlab/intelhex.git
+	branch = debian
