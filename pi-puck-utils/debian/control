@@ -1,0 +1,15 @@
+Source: pi-puck-utils
+Section: utils
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9), dh-python, python3-all
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck
+
+Package: pi-puck-utils
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${python3:Depends}, wiringpi, dfu-util, i2c-tools, pigpio, python3-pigpio, intelhex, python3-smbus
+Description: Pi-puck utilities
+ Utilities for setting up and controlling devices on the Pi-puck board, as well
+ as the attached e-puck robot.
