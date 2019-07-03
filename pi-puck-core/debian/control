@@ -1,0 +1,16 @@
+Source: pi-puck-core
+Section: metapackages
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck-packages
+
+Package: pi-puck-core
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, pi-puck-audio, pi-puck-boot, pi-puck-utils, pi-puck-wifi-led
+Description: Pi-puck core set-up metapackage
+ Installs core packages for using the Pi-puck extension board, including
+ hardware set-up, and utilities for controlling devices on the board and
+ attached e-puck robot.
