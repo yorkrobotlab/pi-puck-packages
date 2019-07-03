@@ -1,3 +1,9 @@
+pi-puck-utils (1.0.1) buster; urgency=medium
+
+  * Fixed I2C bus used by camera init script.
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 03 Jul 2019 15:32:00 +0100
+
 pi-puck-utils (1.0.0) buster; urgency=medium
 
   * Initial release.
