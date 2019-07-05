@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 #
 # Script to program Pi-puck FT903 chip in DFU mode.
 # Must be run as root for dfu-util to work correctly.
