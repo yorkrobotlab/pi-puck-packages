@@ -1,3 +1,9 @@
+pi-puck-boot (1.0.4) buster; urgency=medium
+
+  * Added device tree overlay parameter templates to pi-puck-config.txt
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Tue, 09 Jul 2019 12:04:00 +0100
+
 pi-puck-boot (1.0.3) buster; urgency=medium
 
   * Added ability to set hostname using '/boot/hostname' file
