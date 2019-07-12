@@ -1,3 +1,9 @@
+pi-puck-boot (1.1.1) buster; urgency=medium
+
+  * Added config.txt placeholder for setting I2C baud rate to 400kHz
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Fri, 12 Jul 2019 11:47:00 +0100
+
 pi-puck-boot (1.1.0) buster; urgency=medium
 
   * Added ability to power-off board automatically when using aux battery.
