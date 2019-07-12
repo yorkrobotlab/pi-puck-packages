@@ -9,8 +9,8 @@ Homepage: https://github.com/yorkrobotlab/pi-puck
 Package: pi-puck-boot
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, wiringpi
 Description: Pi-puck boot configuration
- Includes device tree overlay and config file for booting Raspbian on the
- Pi-puck (anything that belongs in /boot). Also sets hostname on boot from
+ Includes device tree overlay, config.txt additions and other configuration
+ files for booting Raspbian on the Pi-puck. Also sets hostname on boot from
  '/boot/hostname' file (if it exists).
