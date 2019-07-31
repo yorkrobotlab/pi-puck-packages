@@ -1,3 +1,11 @@
+pi-puck-boot (1.1.2) buster; urgency=medium
+
+  * Removed config.txt placeholder for setting I2C baud rate to 400kHz.
+  * Set up pins for charge detect and speaker enable in config.txt.
+  * Increased gain of ADC battery monitor readings in device tree.
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 31 Jul 2019 18:04:00 +0100
+
 pi-puck-boot (1.1.1) buster; urgency=medium
 
   * Added config.txt placeholder for setting I2C baud rate to 400kHz
