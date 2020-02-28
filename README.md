@@ -84,3 +84,10 @@ Forked source at https://github.com/yorkrobotlab/dmxwebcam.
 Required for e-puck1 programming script, and not otherwise packaged for Debian.
 
 Forked source at https://github.com/yorkrobotlab/intelhex.
+
+
+## Licence
+
+Unless otherwise specified, software is licensed under an [MIT Licence][mit].
+
+[mit]: /LICENSE
