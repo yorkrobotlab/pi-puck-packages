@@ -1,3 +1,9 @@
+pi-puck-utils (1.1.0) buster; urgency=medium
+
+  * Updated e-puck1 programming script (now called e-puck1-program)
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Tue, 19 May 2020 17:12:00 +0100
+
 pi-puck-utils (1.0.2) buster; urgency=medium
 
   * Fixed FT903 programming script shebang (needs bash, not just sh)
