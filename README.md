@@ -86,6 +86,74 @@ Required for e-puck1 programming script, and not otherwise packaged for Debian.
 Forked source at https://github.com/yorkrobotlab/intelhex.
 
 
+## Building Packages
+
+Packages in this repository can be built into debs using the `debuild` tool.
+Enter each package directory and run:
+```
+debuild -i -us -uc -b
+```
+
+
+### Creating/Hosting a Repository
+
+There are many ways to create and publish a Debian package repository, including just manually constructing files and folders in the correct format.
+
+One convenient option for managing small repositories like this is [aptly](https://www.aptly.info).
+The process we use for publishing packages through aptly looks something like the following.
+
+First create and export a GPG key pair for signing the repository:
+```
+gpg --full-generate-key
+gpg --export-secret-keys --armor user@domain.com > pi-puck-repo-privkey.asc
+gpg --export --armor user@domain.com > pi-puck-repo-pubkey.asc
+gpg --output pi-puck-repo-revoke.asc --gen-revoke user@domain.com
+```
+
+The private key should be kept safe and will be used to sign packages in the repository, while the public key will need to be distributed to users and installed in apt on the Raspberry Pis.
+
+First run `aptly config show` to create a default configuration file at `~/.aptly.conf`.
+
+Next, add a [`FileSystemPublishEndpoints` entry](https://www.aptly.info/doc/feature/filesystem/) like the following for the Pi-puck repository in the aptly configuration file.
+```
+"FileSystemPublishEndpoints": {
+  "pi-puck": {
+    "rootDir": "/path/to/pi-puck/repository",
+    "linkMethod": "copy",
+    "verifyMethod": "md5"
+  }
+}
+```
+
+Then create a new repository and add the debs:
+```
+aptly repo create -comment="Pi-puck supporting packages" pi-puck
+mkdir debs
+cp pi-puck-packages/*.deb debs
+aptly repo add pi-puck debs
+```
+
+To create a snapshot of the repository and publish a signed copy to the directory specified in the config file, run the following (using whatever unique `VERSION` number you like):
+```
+export VERSION=20200519-1
+aptly snapshot create pi-puck_$VERSION from repo pi-puck
+aptly publish snapshot -distribution=buster pi-puck_$VERSION filesystem:pi-puck:debian
+```
+
+Ensure that the published repository has been signed with the correct PGP key.
+
+Finally, serve the contents of the output folder on a web server and set it as a package repository in Raspbian.
+
+In future, to update the repository with a new snapshot of the packages, set a new `VERSION` number and run:
+```
+cp pi-puck-packages/*.deb debs
+aptly repo add pi-puck debs
+export VERSION=20200519-2
+aptly snapshot create pi-puck_$VERSION from repo pi-puck
+aptly publish switch buster filesystem:pi-puck:debian pi-puck_$VERSION
+```
+
+
 ## Licence
 
 Unless otherwise specified, software is licensed under an [MIT Licence][mit].
