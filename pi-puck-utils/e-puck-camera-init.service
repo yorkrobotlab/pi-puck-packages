@@ -1,0 +1,9 @@
+[Unit]
+Description=Initialise e-puck camera sensor over I2C
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/e-puck-camera-init
+
+[Install]
+WantedBy=multi-user.target

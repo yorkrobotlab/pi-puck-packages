@@ -1,3 +1,9 @@
+pi-puck-utils (1.2.0) buster; urgency=medium
+
+  * Added service to initialise e-puck camera sensor on boot over I2C
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 20 May 2020 13:44:00 +0100
+
 pi-puck-utils (1.1.0) buster; urgency=medium
 
   * Updated e-puck1 programming script (now called e-puck1-program)
