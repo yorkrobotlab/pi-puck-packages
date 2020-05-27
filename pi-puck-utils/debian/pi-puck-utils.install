@@ -2,3 +2,5 @@ pi-puck-ft903-program /usr/bin
 e-puck-camera-init /usr/bin
 e-puck-camera-init.service /lib/systemd/system
 e-puck1-program /usr/bin
+pi-puck-battery /usr/bin
+pi-puck-battery.service /lib/systemd/system

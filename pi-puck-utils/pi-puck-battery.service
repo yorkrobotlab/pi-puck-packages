@@ -1,0 +1,8 @@
+[Unit]
+Description=Pi-puck battery monitoring and power control
+
+[Service]
+ExecStart=/usr/bin/pi-puck-battery -qslbrd20
+
+[Install]
+WantedBy=multi-user.target
