@@ -4,4 +4,3 @@ files
 *.debhelper
 *.substvars
 python3-pipuck/
-tmp/
