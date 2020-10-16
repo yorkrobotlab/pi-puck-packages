@@ -1,3 +1,9 @@
+pi-puck-boot (1.1.3) buster; urgency=medium
+
+  * Fixed some bad space characters in pi-puck-config.txt.
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Wed, 16 Oct 2020 10:21:00 +0100
+
 pi-puck-boot (1.1.2) buster; urgency=medium
 
   * Removed config.txt placeholder for setting I2C baud rate to 400kHz.
