@@ -1,0 +1,5 @@
+python3-pipuck (1.0.0) buster; urgency=medium
+
+  * Initial release of Pi-puck Python library Debian package.
+
+ -- Russell Joyce <russell.joyce@york.ac.uk>  Fri, 16 Oct 2020 16:02:00 +0100

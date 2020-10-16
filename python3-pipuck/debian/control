@@ -1,0 +1,15 @@
+Source: python3-pipuck
+Section: python
+Priority: optional
+Maintainer: Russell Joyce <russell.joyce@york.ac.uk>
+Build-Depends: debhelper (>=9), dh-exec, dh-python, python3-all
+Standards-Version: 3.9.8
+Homepage: https://github.com/yorkrobotlab/pi-puck
+X-Python3-Version: >= 3.5
+
+Package: python3-pipuck
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${python3:Depends}, python3-smbus, python3-rpi.gpio
+Description: Pi-puck Python library
+ Python library for interfacing with Pi-puck robot hardware.
