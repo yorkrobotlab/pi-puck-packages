@@ -5,3 +5,6 @@
 /*.build
 /*.buildinfo
 /*.changes
+
+# macOS
+.DS_Store
